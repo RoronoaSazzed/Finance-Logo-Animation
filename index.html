@@ -21,55 +21,55 @@
 
       .wrapper {
         width: 100%;
-        max-width: 1080px;
+        max-width: 480px;
       }
 
       #bottom_right {
         stroke-dasharray: 456.561279296875;
         stroke-dashoffset: 456.561279296875;
-        animation: lineIn 2s linear forwards;
+        animation: lineIn 2s linear 0.5s forwards;
       }
 
       #bottom_left {
         stroke-dasharray: 456.561279296875;
         stroke-dashoffset: 456.561279296875;
-        animation: lineIn 2s linear forwards;
+        animation: lineIn 2s linear 0.5s forwards;
       }
 
       #top_right {
         stroke-dasharray: 456.5599670410156;
         stroke-dashoffset: 456.5599670410156;
-        animation: lineIn 2s linear forwards;
+        animation: lineIn 2s linear 0.5s forwards;
       }
 
       #center_left {
         stroke-dasharray: 456.5599670410156;
         stroke-dashoffset: 456.5599670410156;
-        animation: lineIn 2s linear forwards;
+        animation: lineIn 2s linear 0.5s forwards;
       }
 
       #center_right {
         stroke-dasharray: 456.5603942871094;
         stroke-dashoffset: 456.5603942871094;
-        animation: lineIn 2s linear forwards;
+        animation: lineIn 2s linear 0.5s forwards;
       }
 
       #bottom_center {
         stroke-dasharray: 456.5603942871094;
         stroke-dashoffset: 456.5603942871094;
-        animation: lineIn 2s linear forwards;
+        animation: lineIn 2s linear 0.5s forwards;
       }
 
       #top_left {
         stroke-dasharray: 456.56231689453125;
         stroke-dashoffset: 456.56231689453125;
-        animation: lineIn 2s linear forwards;
+        animation: lineIn 2s linear 0.5s forwards;
       }
 
       #top_center {
         stroke-dasharray: 251.3809814453125;
         stroke-dashoffset: 251.3809814453125;
-        animation: lineIn 2s linear forwards;
+        animation: lineIn 2s linear 0.5s forwards;
       }
 
       @keyframes lineIn {
@@ -80,12 +80,85 @@
 
       #all-shadow {
         opacity: 0;
-        animation: shadowsIn 0.5s linear 2s forwards;
+        animation: shadowsIn 0.5s linear 2.5s forwards;
       }
 
       @keyframes shadowsIn {
         100% {
           opacity: 1;
+        }
+      }
+
+      #l_1 {
+        transform-box: fill-box;
+        transform-origin: center;
+        transform: rotate(180deg);
+        stroke-dasharray: 159.22000122070312;
+        stroke-dashoffset: 159.22000122070312;
+        animation: Lin1 1s linear forwards;
+      }
+
+      @keyframes Lin1 {
+        50% {
+          stroke-dashoffset: 0;
+        }
+
+        100% {
+          stroke-dashoffset: -159.22000122070312;
+        }
+      }
+
+      #l_2 {
+        transform-box: fill-box;
+        transform-origin: center;
+        transform: rotate(180deg);
+        stroke-dasharray: 157.7740020751953;
+        stroke-dashoffset: 157.7740020751953;
+        animation: Lin2 2s linear forwards;
+      }
+
+      @keyframes Lin2 {
+        50% {
+          stroke-dashoffset: 0;
+        }
+
+        100% {
+          stroke-dashoffset: -157.7740020751953;
+        }
+      }
+
+      #l_3 {
+        transform-box: fill-box;
+        transform-origin: center;
+        transform: rotate(180deg);
+        stroke-dasharray: 157.7740020751953;
+        stroke-dashoffset: 157.7740020751953;
+        animation: Lin3 2s linear forwards;
+      }
+
+      @keyframes Lin3 {
+        50% {
+          stroke-dashoffset: 0;
+        }
+
+        100% {
+          stroke-dashoffset: -157.7740020751953;
+        }
+      }
+
+      #l_4 {
+        stroke-dasharray: 157.7740020751953;
+        stroke-dashoffset: 157.7740020751953;
+        animation: Lin4 2s linear forwards;
+      }
+
+      @keyframes Lin4 {
+        50% {
+          stroke-dashoffset: 0;
+        }
+
+        100% {
+          stroke-dashoffset: -157.7740020751953;
         }
       }
     </style>
@@ -100,7 +173,7 @@
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <g id="SQ">
+          <g id="SQ" clip-path="url(#clip0_4_93)">
             <g id="bottom_right">
               <mask id="path-1-inside-1_4_93" fill="white">
                 <path
@@ -491,6 +564,32 @@
                 />
               </g>
             </g>
+            <g id="l">
+              <path
+                id="l_1"
+                d="M156.72 68.8755L-2.5 68.8755"
+                stroke="#BE272E"
+                stroke-width="18"
+              />
+              <path
+                id="l_2"
+                d="M320.219 157.774L320.219 0"
+                stroke="#BE272E"
+                stroke-width="18"
+              />
+              <path
+                id="l_3"
+                d="M230.226 319.124L388 319.124"
+                stroke="#BE272E"
+                stroke-width="18"
+              />
+              <path
+                id="l_4"
+                d="M68.4698 388L68.4698 230.226"
+                stroke="#BE272E"
+                stroke-width="18"
+              />
+            </g>
           </g>
           <defs>
             <linearGradient
@@ -877,13 +976,16 @@
               <stop />
               <stop offset="1" stop-opacity="0" />
             </linearGradient>
+            <clipPath id="clip0_4_93">
+              <rect width="388" height="388" fill="white" />
+            </clipPath>
           </defs>
         </svg>
       </div>
     </div>
 
     <script>
-      const introText = document.querySelectorAll("#SQ path");
+      const introText = document.querySelectorAll("#l path");
 
       for (let i = 0; i < introText.length; i++) {
         console.log(`letter ${i} is ${introText[i].getTotalLength()}`);
